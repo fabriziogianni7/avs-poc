@@ -1,0 +1,4 @@
+{
+  "solidity.validationDelay": 500,
+  "solidity.remappings": ["forge-std/=contracts/lib/forge-std/src/"]
+}

@@ -1,0 +1,17 @@
+possible APIs:
+
+https://api.coingecko.com/api/v3/simple/price?ids=beam&vs_currencies=usd
+https://api.binance.com/api/v3/ticker/price?symbol=BEAMXUSDT
+
+
+FORGOTTEN PLAYLAND!
+https://api.coingecko.com/api/v3/simple/price?ids=forgotten-playland&vs_currencies=usd
+
+
+oracle deployed at 0xe68bFf99c9b11F018bdECe3725c4Dd83cC76d58B
+
+// deploy the oracle
+forge script DeployOracleScript --rpc-url https://rpc.ankr.com/polygon_amoy/80921f6657bf5ad15fb4577b369c28c4f84a652625322575f085fceaa7e47653 --account beam-test-1 --broadcast
+
+// get the price
+forge script GetPriceScript --rpc-url https://rpc.ankr.com/polygon_amoy/80921f6657bf5ad15fb4577b369c28c4f84a652625322575f085fceaa7e47653 
