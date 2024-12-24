@@ -1,5 +1,16 @@
-# Simple Price Oracle AVS Example
+# Bringing Oracles To Beam Network
+--------------------------------
+# TL;DR!
+In this PoC, I set up a custom oracle using [Othentic cli](https://docs.othentic.xyz/main) stack and [eigenlayer](https://docs.eigenlayer.xyz/developers/avs-developer-guide).
+Basically there is a system where 3 Attester nodes fetch the price from a data source like [binance](https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT) and other Validator nodes check that the price is correct. After the check passes, the price is set on chain.
 
+[check this tx to see the price on chain of ETH in USD](https://amoy.polygonscan.com/address/0x7a67aa310537E6e9Afc99800fc557d22F6F1A859#readContract#F3)
+
+At the moment this is in amoy testnet. We can Deploy Othentic Contracts on Beam.
+
+_______
+
+# Simple Price Oracle AVS Example
 This repository demonstrates how to implement a simple price oracle AVS using the Othentic Stack.
 
 ---
