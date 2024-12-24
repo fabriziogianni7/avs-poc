@@ -7,7 +7,7 @@ Basically there is a system where 3 Attester nodes fetch the price from a data s
 [check this tx to see the price on chain of ETH in USD](https://amoy.polygonscan.com/address/0x7a67aa310537E6e9Afc99800fc557d22F6F1A859#readContract#F3)
 
 At the moment this is in amoy testnet. We can Deploy Othentic Contracts on Beam.
-
+check the video demo
 _______
 
 # Simple Price Oracle AVS Example
