@@ -8,6 +8,8 @@ contract Oracle is IAvsLogic {
     error NotImplemented();
     error IsNotAttestationCenter();
 
+    event PriceSet();
+
     uint256 public price;
     address public attestationCenter;
 
@@ -26,6 +28,8 @@ contract Oracle is IAvsLogic {
             revert IsNotAttestationCenter();
         }
         price = abi.decode(_taskInfo.data, (uint256));
+        // price = _taskInfo.data;
+        emit PriceSet();
     }
 
     function beforeTaskSubmission(
@@ -34,7 +38,5 @@ contract Oracle is IAvsLogic {
         bytes calldata _tpSignature,
         uint256[2] calldata _taSignature,
         uint256[] calldata _operatorIds
-    ) external pure {
-        revert NotImplemented();
-    }
+    ) external pure {}
 }

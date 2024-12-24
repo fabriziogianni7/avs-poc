@@ -21,8 +21,8 @@ async function sendTask(proofOfTask, data, taskDefinitionId) {
   var wallet = new ethers.Wallet(privateKey);
   var performerAddress = wallet.address;
 
-  data = ethers.hexlify(ethers.parseUnits(data, 8).toString());
-  // data = ethers.AbiCoder.defaultAbiCoder().encode(["uint256"], [data]);
+  // data = ethers.hexlify(ethers.toUtf8Bytes((Number(data) * 10e8).toString()));
+  data = ethers.AbiCoder.defaultAbiCoder().encode(["uint256"], [(Number(data) * 10e8)]);
 
   console.log("DATA CONBVERTED:", data)
   const message = ethers.AbiCoder.defaultAbiCoder().encode(["string", "bytes", "address", "uint16"], [proofOfTask, data, performerAddress, taskDefinitionId]);
